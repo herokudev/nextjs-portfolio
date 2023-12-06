@@ -74,7 +74,7 @@ const Navbar = () => {
                             {navLinks.map((Link) => (
                                 <li
                                     key={Link.id}
-                                    className={`font-poppins font-medium cursor-pointer text-[16px] text-green-400`}
+                                    className={`font-poppins font-medium cursor-pointer text-[16px] text-white`}
                                     onClick={() => {
                                         setToggle(!toggle);
                                         setActive(Link.title);
