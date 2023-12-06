@@ -7,6 +7,7 @@ import { styles } from '../styles'
 import { navLinks } from '../constants'
 import logo from '../assets/logo_color.svg'
 import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
 
 const Navbar = () => {
     const [active, setActive] = useState("");
@@ -63,12 +64,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className='sm:hidden flex flex-1 justify-end items-center'>
-                    <img
-                        src={toggle ? close : menu}
-                        alt='menu'
-                        className='w-[28px] h-[28px] object-contain'
-                        onClick={() => setToggle(!toggle)}
-                    />
+                    <Image src={toggle ? close : menu} alt='menu' width={28} height={28} className='object-contain' onClick={() => setToggle(!toggle)} />
 
                     <div
                         className={`${!toggle ? "hidden" : "flex"
@@ -78,8 +74,7 @@ const Navbar = () => {
                             {navLinks.map((Link) => (
                                 <li
                                     key={Link.id}
-                                    className={`font-poppins font-medium cursor-pointer text-[16px] ${active === Link.title ? "text-white" : "text-secondary"
-                                        }`}
+                                    className={`font-poppins font-medium cursor-pointer text-[16px] text-green-400`}
                                     onClick={() => {
                                         setToggle(!toggle);
                                         setActive(Link.title);
