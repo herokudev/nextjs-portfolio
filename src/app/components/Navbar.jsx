@@ -4,10 +4,24 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import { styles } from '../styles'
-import { navLinks } from '../constants'
 import logo from '../assets/logo_color.svg'
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
+
+const navLinks = [
+    {
+      id: "\\",
+      title: "Home",
+    },
+    {
+      id: "\\blog",
+      title: "Blog",
+    },
+    {
+      id: "\\contact",
+      title: "Contact",
+    },
+  ];
 
 const Navbar = () => {
     const [active, setActive] = useState("");
@@ -58,7 +72,7 @@ const Navbar = () => {
                                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                             onClick={() => setActive(Link.title)}
                         >
-                            <a href={`#${Link.id}`}>{Link.title}</a>
+                            <a href={`${Link.id}`}>{Link.title}</a>
                         </li>
                     ))}
                 </ul>
@@ -80,7 +94,7 @@ const Navbar = () => {
                                         setActive(Link.title);
                                     }}
                                 >
-                                    <a href={`#${Link.id}`}>{Link.title}</a>
+                                    <a href={`${Link.id}`}>{Link.title}</a>
                                 </li>
                             ))}
                         </ul>

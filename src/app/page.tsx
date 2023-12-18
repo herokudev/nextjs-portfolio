@@ -6,9 +6,6 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Tech from './components/Tech'
 import Works from './components/Works'
-import Contact from './components/Contact'
-import StarsCanvas from './components/canvas/Stars'
-import Linkedin from './components/Linkedin'
 
 export default function Home() {
   return (
@@ -20,13 +17,7 @@ export default function Home() {
       <About />
             <Experience />
             <Tech />
-            <Works />
-            
-            <div className='relative z-0'>
-                <Contact />
-                <StarsCanvas />
-            </div>
-            <Linkedin />         
+            <Works />       
     </main>
   )
 }
